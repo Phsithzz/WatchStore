@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ecom/screens/cart_page.dart';
 import 'package:flutter_ecom/screens/intro_page.dart';
+import 'package:flutter_ecom/screens/shop_page.dart';
 import 'package:flutter_ecom/themes/light_mode.dart';
 
 void main() {
@@ -14,7 +16,12 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home:IntroPage(),
-      theme:lightMode
+      theme:lightMode,
+      routes:{
+        "/intro_page":(context)=>const IntroPage(),
+        "/shop_page":(context)=>const ShopPage(),
+        "/cart_page":(context)=>const CartPage()
+      }
     );
   }
 }

@@ -34,7 +34,10 @@ class IntroPage extends StatelessWidget {
             ),
             const SizedBox(height: 10),
             //button
-            MyButton(onTap: () {}, child: Icon(Icons.arrow_forward)),
+            MyButton(
+              onTap: () => Navigator.pushNamed(context, "/shop_page"),
+              child: Icon(Icons.arrow_forward),
+            ),
           ],
         ),
       ),
