@@ -1,11 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ecom/controllers/shop.dart';
+import 'package:provider/provider.dart';
+
+
 import 'package:flutter_ecom/screens/cart_page.dart';
 import 'package:flutter_ecom/screens/intro_page.dart';
 import 'package:flutter_ecom/screens/shop_page.dart';
 import 'package:flutter_ecom/themes/light_mode.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => Shop(),
+      child: const MainApp(),
+    ),
+  );
 }
 
 class MainApp extends StatelessWidget {
@@ -15,13 +24,14 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:IntroPage(),
-      theme:lightMode,
-      routes:{
-        "/intro_page":(context)=>const IntroPage(),
-        "/shop_page":(context)=>const ShopPage(),
-        "/cart_page":(context)=>const CartPage()
-      }
+      theme: lightMode,
+      
+      home: const IntroPage(),
+      routes: {
+        "/intro_page": (context) => const IntroPage(),
+        "/shop_page": (context) => const ShopPage(),
+        "/cart_page": (context) => const CartPage(),
+      },
     );
   }
 }

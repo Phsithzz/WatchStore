@@ -37,7 +37,7 @@ class MyDrawer extends StatelessWidget {
                   //pop drawer first
                   Navigator.pop(context);
                   //go to cart page
-                  Navigator.pushNamed(context, "/cart_page")
+                  Navigator.pushNamed(context, "/cart_page");
                 },
               ),
             ],
@@ -50,7 +50,7 @@ class MyDrawer extends StatelessWidget {
             child: MyListTile(
               text: "Exit",
               icon: Icons.logout,
-              onTap: () => Navigator.pushNamed(context, "/intro_page"),
+              onTap: () => Navigator.pushNamedAndRemoveUntil(context, "/intro_page",(route)=>false),
             ),
           ),
         ],
