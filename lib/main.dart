@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+
 import 'package:flutter_ecom/controllers/shop.dart';
 import 'package:provider/provider.dart';
-
 
 import 'package:flutter_ecom/screens/cart_page.dart';
 import 'package:flutter_ecom/screens/intro_page.dart';
 import 'package:flutter_ecom/screens/shop_page.dart';
+
 import 'package:flutter_ecom/themes/light_mode.dart';
 
 void main() {

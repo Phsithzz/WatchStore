@@ -7,26 +7,25 @@ import 'package:provider/provider.dart';
 class CartPage extends StatelessWidget {
   const CartPage({super.key});
 
-  //remove item from cart method
   void removeItemFromCart(BuildContext context, Product product) {
-    //shop a dialog bot to ask user to confirm to remove to cart
+
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
         content: Text("Remove this item to your cart?"),
         actions: [
-          //cancel button
+
           TextButton(
             onPressed: () => Navigator.pop(context),
             child: Text("Cancel"),
           ),
 
-          //yes button
+
           TextButton(
             onPressed: () {
-              //pop dialog box
+          
               Navigator.pop(context);
-              //add to cart
+ 
               context.read<Shop>().removeCart(product);
             },
 
@@ -37,13 +36,13 @@ class CartPage extends StatelessWidget {
     );
   }
 
-  //user pressed pay button
+
   void payButtonPressed(BuildContext context) {
     showDialog(
       context: context,
       builder: (context) => const AlertDialog(
         content: Text(
-          "User wants to pay! Connect this app to your payment backend",
+          "Pay Success!",
         ),
       ),
     );

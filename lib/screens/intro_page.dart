@@ -12,20 +12,20 @@ class IntroPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            //logo
+            
             Icon(
               Icons.shopping_bag,
               size: 72,
               color: Theme.of(context).colorScheme.inversePrimary,
             ),
             const SizedBox(height: 10),
-            //title
+      
             const Text(
               "Watch Store",
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
             ),
 
-            //subtitle
+      
             Text(
               "Primium Quality Products",
               style: TextStyle(
@@ -33,7 +33,7 @@ class IntroPage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 10),
-            //button
+     
             MyButton(
               onTap: () => Navigator.pushNamed(context, "/shop_page"),
               child: Icon(Icons.arrow_forward),
