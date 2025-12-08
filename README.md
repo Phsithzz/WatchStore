@@ -5,8 +5,7 @@
 ---
 
 ## 📺 Demo / ผลลัพธ์
-[![Watch Store App Demo](https://img.youtube.com/vi/5gadwHGwFw4/0.jpg)](https://youtube.com/shorts/5gadwHGwFw4)
-
+[Watch the demo on YouTube](https://youtube.com/shorts/5gadwHGwFw4)
 
 ## 📱 Features
 - 🛍️ แสดงรายการสินค้านาฬิกา  
